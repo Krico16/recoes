@@ -19,7 +19,7 @@ services:
     depends_on:
       - postgres
     environment:
-      - DATABASE_URL=postgresql://admin:password@postgres:5432/educational_app
+      - DATABASE_URL=postgresql://admin:password@postgres:5666/educational_app
     command: sh -c "sleep 5 && bunx prisma migrate deploy && bun run seed && bun run start"
 
 volumes:
