@@ -4,8 +4,8 @@ import jwt from 'jsonwebtoken';
  * Service for JWT token operations.
  */
 export class JWTService {
-  private static accessSecret = process.env.JWT_ACCESS_SECRET || 'access_secret';
-  private static refreshSecret = process.env.JWT_REFRESH_SECRET || 'refresh_secret';
+  private static accessSecret = Bun.env.JWT_ACCESS_SECRET || 'access_secret';
+  private static refreshSecret = Bun.env.JWT_REFRESH_SECRET || 'refresh_secret';
   private static accessExpiresIn = '15m';
   private static refreshExpiresIn = '7d';
 

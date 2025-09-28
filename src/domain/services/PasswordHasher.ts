@@ -4,7 +4,7 @@ import bcrypt from 'bcrypt';
  * Domain service for password hashing and verification.
  */
 export class PasswordHasher {
-  private static readonly SALT_ROUNDS = 10;
+  private static readonly SALT_ROUNDS = parseInt(Bun.env.BCRYPT_SALT_ROUNDS || '10', 10);
 
   /**
    * Hashes a plain password.
