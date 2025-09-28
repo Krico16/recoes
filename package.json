@@ -3,13 +3,31 @@
   "version": "1.0.50",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "bun run --watch src/index.ts"
+    "dev": "bun run --watch src/index.ts",
+    "build": "bun build src/index.ts --outdir dist --target node",
+    "start": "bun run dist/index.js",
+    "seed": "bun run src/seed.ts"
   },
   "dependencies": {
-    "elysia": "latest"
+    "@elysiajs/jwt": "latest",
+    "@elysiajs/swagger": "latest",
+    "@prisma/client": "^6.16.2",
+    "@types/jsonwebtoken": "^9.0.10",
+    "bcrypt": "latest",
+    "csv-parser": "latest",
+    "elysia": "latest",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "latest",
+    "nodemailer": "latest",
+    "pg": "latest",
+    "prisma": "^6.16.2"
   },
   "devDependencies": {
-    "bun-types": "latest"
+    "bun-types": "latest",
+    "@types/bcrypt": "latest",
+    "@types/pg": "latest",
+    "@types/nodemailer": "latest",
+    "@types/multer": "latest"
   },
   "module": "src/index.js"
 }
