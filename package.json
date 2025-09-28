@@ -5,8 +5,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "bun run --watch src/index.ts",
     "build": "bun build src/index.ts --outdir dist --target node",
-    "start": "bun run dist/index.js",
-    "seed": "bun run src/seed.ts"
+    "start": "bun dist/index.js",
+    "seed": "bun src/seed.ts"
   },
   "dependencies": {
     "@elysiajs/jwt": "latest",
