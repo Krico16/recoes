@@ -13,6 +13,6 @@ RUN bunx prisma generate
 
 RUN bun run build
 
-EXPOSE 3000/tcp
+EXPOSE 3002/tcp
 
 CMD ["bun", "dist/index.js"]
