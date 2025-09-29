@@ -15,11 +15,15 @@ services:
   backend:
     build: .
     ports:
-      - "3000:3000"
+      - "3002:3002"
+    environment:
+      - DATABASE_URL=postgresql://admin:password@postgres:5432/educational_app
+      - JWT_ACCESS_SECRET=your_jwt_access_secret
+      - JWT_REFRESH_SECRET=your_jwt_refresh_secret
+      - BCRYPT_SALT_ROUNDS=8
     depends_on:
       - postgres
-    environment:
-    command: sh -c "sleep 5 && bunx prisma migrate deploy"
+    command: sh -c "sleep 5 && bunx prisma migrate deploy && bun run seed"
     restart: always
 
 volumes:
