@@ -38,7 +38,7 @@ app.get("/protected", async ({ headers }) => {
   }
 });
 
-app.listen(3002);
+app.listen(Bun.env.APP_PORT || 3000);
 
 console.log(
   `🦊 Elysia is running at ${app.server?.hostname}:${app.server?.port}`

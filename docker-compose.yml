@@ -21,9 +21,10 @@ services:
       - JWT_ACCESS_SECRET=your_jwt_access_secret
       - JWT_REFRESH_SECRET=your_jwt_refresh_secret
       - BCRYPT_SALT_ROUNDS=8
+      - APP_PORT=3002
     depends_on:
       - postgres
-    command: sh -c "sleep 20"
+    command: sh -c "sleep 5 && bun start"
     # restart: always
 
 volumes:
