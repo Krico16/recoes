@@ -23,8 +23,8 @@ services:
       - BCRYPT_SALT_ROUNDS=8
     depends_on:
       - postgres
-    command: sh -c "sleep 5 && bunx prisma migrate deploy && bun run seed"
-    restart: always
+    command: sh -c "sleep 20"
+    # restart: always
 
 volumes:
   postgres_data:

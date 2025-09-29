@@ -38,7 +38,7 @@ app.get("/protected", async ({ headers }) => {
   }
 });
 
-app.listen(3000);
+app.listen(3002);
 
 console.log(
   `🦊 Elysia is running at ${app.server?.hostname}:${app.server?.port}`
