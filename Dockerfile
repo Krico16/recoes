@@ -15,4 +15,4 @@ RUN bun run build
 
 EXPOSE $PORT/tcp
 
-CMD ["bun", "dist/index.js"]
+CMD ["bun", "start"]

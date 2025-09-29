@@ -22,6 +22,8 @@ questionController.registerRoutes(app);
 const responseController = new ResponseController();
 responseController.registerRoutes(app);
 
+app.get("/health", () => ({ status: "ok" }));
+
 // Protected route example
 app.get("/protected", async ({ headers }) => {
   const authHeader = headers.authorization;
