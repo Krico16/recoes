@@ -13,6 +13,7 @@ RUN bunx prisma generate
 
 RUN bun run build
 
-EXPOSE 3002/tcp
+ARG PORT=ENV PORT
+EXPOSE $PORT/tcp
 
 CMD ["bun", "dist/index.js"]
